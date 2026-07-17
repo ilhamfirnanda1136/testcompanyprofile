@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0b1220;
+  --color-ink-soft: #152033;
+  --color-mist: #e8eef6;
+  --color-fog: #94a3b8;
+  --color-teal: #0d9488;
+  --color-teal-bright: #14b8a6;
+  --color-amber: #f59e0b;
+  --color-slate-line: #243044;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-mist font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-teal text-ink;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-teal px-5 py-3 text-sm font-semibold text-ink transition hover:bg-teal-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-bright;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-line bg-transparent px-5 py-3 text-sm font-semibold text-mist transition hover:border-teal hover:text-teal-bright;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-teal-bright;
+  }
+
+  .display-title {
+    @apply font-display text-4xl font-bold leading-[1.1] tracking-tight text-mist md:text-5xl lg:text-6xl;
+  }
+
+  .prose-muted {
+    @apply text-base leading-relaxed text-fog md:text-lg;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-fog transition hover:text-mist;
+  }
+
+  .nav-link.is-active {
+    @apply text-teal-bright;
+  }
+
+  .faq-item summary {
+    @apply cursor-pointer list-none font-display text-lg font-semibold text-mist;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13, 148, 136, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .fade-up {
+    animation: apexora-fade-up 0.8s ease both;
+  }
+
+  .fade-up-delay {
+    animation: apexora-fade-up 0.9s ease 0.15s both;
+  }
+
+  .fade-up-delay-2 {
+    animation: apexora-fade-up 1s ease 0.3s both;
+  }
+
+  .apexora-prose {
+    @apply text-base leading-relaxed text-fog;
+  }
+
+  .apexora-prose > * + * {
+    @apply mt-5;
+  }
+
+  .apexora-prose h2 {
+    @apply font-display text-2xl font-bold text-mist;
+  }
+
+  .apexora-prose h3 {
+    @apply font-display text-xl font-semibold text-mist;
+  }
+
+  .apexora-prose a {
+    @apply text-teal-bright underline-offset-2 hover:underline;
+  }
+
+  .apexora-prose ul {
+    @apply list-disc space-y-2 pl-5;
+  }
+
+  .apexora-prose ol {
+    @apply list-decimal space-y-2 pl-5;
+  }
+
+  .apexora-prose blockquote {
+    @apply border-l-2 border-teal pl-4 italic text-mist;
+  }
+
+  .apexora-prose img {
+    @apply rounded-lg border border-slate-line;
+  }
+
+  .apexora-prose code {
+    @apply rounded bg-ink-soft px-1.5 py-0.5 text-sm text-teal-bright;
+  }
+}
+
+@keyframes apexora-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

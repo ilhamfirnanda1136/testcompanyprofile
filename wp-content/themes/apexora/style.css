@@ -1,0 +1,16 @@
+/*
+Theme Name: Apexora Softworks
+Theme URI: https://apexora.id
+Author: Apexora Softworks
+Author URI: https://apexora.id
+Description: Company profile theme for a software house — Tailwind CSS, SEO, AEO, GEO, AIO, and Google Analytics via .env.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+Text Domain: apexora
+Tags: company-profile, software-house, tailwind, seo, custom-menu
+License: GNU General Public License v2 or later
+*/
+
+/* Styles are compiled from assets/css/input.css via Tailwind → assets/css/app.css */
