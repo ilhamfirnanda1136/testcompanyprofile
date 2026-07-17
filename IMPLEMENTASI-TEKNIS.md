@@ -1,6 +1,6 @@
 # Implementasi Teknis — Company Profile Apexora
 
-Ringkasan konfigurasi yang diminta. Detail lengkap ada di `wp-content/themes/apexora/README.md`.
+Ringkasan cepat. Panduan lengkap ada di **[README.md](README.md)**.
 
 ## Google Analytics (env)
 
@@ -17,9 +17,9 @@ Isi `GA_MEASUREMENT_ID=G-XXXX` dengan Measurement ID GA4 produksi. Placeholder t
 | Fitur | File |
 |-------|------|
 | Title, description, robots, canonical, OG, Twitter | `inc/seo.php` |
-| JSON-LD Organization / WebSite / Service / FAQ / Event | `inc/schema.php` |
+| JSON-LD Organization / WebSite / Service / FAQ / Event / Article / Blog | `inc/schema.php` |
 | Sitemap | WordPress core `/wp-sitemap.xml` |
-| Halaman | Tentang Kami, Produk/Servis, Kontak, Events, FAQ, Member Login |
+| Halaman | Tentang Kami, Produk/Servis, Blog, Kontak, Events, FAQ, Member Login |
 
 ## AEO (Answer Engine Optimization)
 
@@ -32,6 +32,16 @@ Jawaban singkat Q→A (`apexora_answer_bank`), FAQ page, schema `FAQPage`, meta 
 ## AIO (AI Optimization)
 
 Meta `ai:page-intent`, entity type, `/ai.txt` policy (allow/disallow), Member Login di-noindex.
+
+## Blog (CMS Posts)
+
+| Item | Lokasi |
+|------|--------|
+| Listing | `/blog/` → `home.php` |
+| Detail | `single.php` (`the_content()` dari Posts) |
+| Setup | `inc/blog.php` |
+
+Kelola konten lewat **Admin → Posts**.
 
 ## Tema Tailwind
 

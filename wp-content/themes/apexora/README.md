@@ -22,6 +22,7 @@ Dibuat otomatis saat tema diaktifkan (`inc/pages-setup.php`):
 | `/produk-servis/` | Produk / Servis |
 | `/kontak/` | Kontak |
 | `/events/` | Events |
+| `/blog/` | Blog / artikel CMS (`home.php`) |
 | `/faq/` | FAQ |
 | `/member-login/` | Member Login (`noindex`) |
 
@@ -110,6 +111,7 @@ apexora/
 ├── inc/
 │   ├── analytics.php
 │   ├── aeo-geo-aio.php
+│   ├── blog.php
 │   ├── contact.php
 │   ├── enqueue.php
 │   ├── pages-setup.php
@@ -117,6 +119,9 @@ apexora/
 │   ├── seo.php
 │   └── setup.php
 ├── front-page.php
+├── home.php                 # listing blog
+├── single.php               # detail artikel CMS
+├── archive.php
 ├── page-tentang-kami.php
 ├── page-produk-servis.php
 ├── page-kontak.php
@@ -128,6 +133,14 @@ apexora/
 └── style.css
 ```
 
+## Blog (CMS)
+
+Konten dari **Admin → Posts**. Listing di `/blog/`, detail di `single.php`, helper di `inc/blog.php`.
+
 ## Permalink
 
 Gunakan **Post name** di Settings → Permalinks agar slug SEO (`/tentang-kami/`, dll.) aktif, lalu Save untuk flush rewrite (`llms.txt` / `ai.txt`).
+
+## Dokumen root
+
+Lihat juga [`README.md`](../../../README.md) dan [`IMPLEMENTASI-TEKNIS.md`](../../../IMPLEMENTASI-TEKNIS.md) di root project.
